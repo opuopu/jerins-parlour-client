@@ -3,7 +3,8 @@ import lady from '../../assets/Image_Icon/Image/young.png'
 export default function Banner() {
   return (
     
-    <div className="hero min-h-screen">
+   <div className='bg-[#E5E5E5]'>
+     <div className="hero  py-20 ">
   <div className="hero-content flex-col gap-x-20 lg:flex-row-reverse">
     <img src={lady} className="max-w-sm rounded-lg shadow-2xl" />
     <div>
@@ -13,5 +14,6 @@ export default function Banner() {
     </div>
   </div>
 </div>
+   </div>
   )
 }
