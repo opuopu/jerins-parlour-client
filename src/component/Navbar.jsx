@@ -1,7 +1,11 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import icon from '../assets/Image_Icon/Group 33092.png'
+import useauth from '../hooks/UseAuth'
 export default function Navbar() {
+const {LoginNow,user,loading,signout} = useauth()
+
+
   return (
     <div className='bg-[#E5E5E5] '>
 <div className="navbar w-4/5 mx-auto ">
@@ -37,8 +41,9 @@ export default function Navbar() {
     </ul>
   </div>
   <div className="navbar-end">
-    <a className="btn bg-[#F63E7B] text-white border-0">Login </a>
-  </div>
+   { !user?.email ? <Link  to='/login'>     <a  className="btn bg-[#F63E7B] text-[#fff] border-0">Login </a>
+  </Link> :  <a onClick={signout}  className="btn bg-[#F63E7B] text-[#fff] border-0">Logout </a>}
+</div>
 </div>
 </div>
   )
