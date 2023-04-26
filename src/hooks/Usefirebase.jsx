@@ -13,6 +13,7 @@ const Usefirebase = () =>{
     const provider = new GoogleAuthProvider();
 
     const LoginNow =()=>{
+        setloading(true)
         return signInWithPopup (auth,provider)
         
     }

@@ -1,15 +1,21 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useLocation, useNavigate } from 'react-router-dom'
 import useauth from '../../hooks/UseAuth'
 
 export default function Login() {
     const {LoginNow,user} = useauth()
+    const location = useLocation()
+  const navigate = useNavigate()
+  const from  = location?.state?.from?.pathname || '/'
+
     const handleLogin =()=>{
         LoginNow()
         .then(result=>{
           console.log(result.user)
           if(result.user){
+            navigate(from,{replace:true})
             handlePost(result.user)
+
           }
         })
         .catch(error=>{

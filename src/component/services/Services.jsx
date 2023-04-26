@@ -1,7 +1,6 @@
 import { useQuery } from '@tanstack/react-query'
 import React from 'react'
 import Service from './Service'
-
 export default function Services() {
 
   const {data:Services=[]} = useQuery({
@@ -15,10 +14,11 @@ export default function Services() {
   }) 
   return (
     <div className='w-3/4 mx-auto'>
+      
 <h1 className='text-3xl text-center  font-bold mt-6 text-primary1'>Our Awesome Services</h1>
 <div className='grid grid-cols-3 gap-12 my-10'>
-{
-  Services?.map(service =>(
+{ !Services ? <Loaiding/> :
+  Services.map(service =>(
     <Service service={service} key={service?._id}></Service>
   ))
 }
