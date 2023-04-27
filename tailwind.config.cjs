@@ -9,7 +9,7 @@ module.exports = {
         "bg1":'#E5E5E5'
       },
     },
-  
+
   },
 
   plugins: [require("daisyui")],
