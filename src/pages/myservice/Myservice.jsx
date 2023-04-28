@@ -7,10 +7,10 @@ export default function Myservice() {
       {/* head */}
       <thead>
         <tr>
-          <th></th>
+          <th>position</th>
           <th>Name</th>
-          <th>Job</th>
-          <th>Favorite Color</th>
+          <th>price</th>
+          <th>payment</th>
         </tr>
       </thead>
       <tbody>
@@ -22,19 +22,9 @@ export default function Myservice() {
           <td>Blue</td>
         </tr>
         {/* row 2 */}
-        <tr>
-          <th>2</th>
-          <td>Hart Hagerty</td>
-          <td>Desktop Support Technician</td>
-          <td>Purple</td>
-        </tr>
+    
         {/* row 3 */}
-        <tr>
-          <th>3</th>
-          <td>Brice Swyre</td>
-          <td>Tax Accountant</td>
-          <td>Red</td>
-        </tr>
+       
       </tbody>
     </table>
   </div>
